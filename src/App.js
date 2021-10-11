@@ -44,7 +44,7 @@ function App() {
       <h1>Random coctail</h1>
       {drink.map(drink => (
         <div key={drink.idDrink}>
-          <img src={drink.strDrinkThumb}></img>
+          <img src={drink.strDrinkThumb} alt="Drink of the day"></img>
           <h3>{drink.strDrink}</h3>
           <ul>
             <ol>{drink.strMeasure1} {drink.strIngredient1}</ol>
