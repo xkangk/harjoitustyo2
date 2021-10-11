@@ -3,18 +3,16 @@ import {useState, useEffect} from "react";
 
 
 function App() {
-
-  
-  function refreshPage() {
-    window.location.reload(false);
-  }
-
-
   const URL ="http://www.thecocktaildb.com/api/json/v1/1/";
 
   const [drink, setDrinks] = useState([]);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+
+
+  function refreshPage() {
+    window.location.reload(false);
+  }
 
   useEffect(() => {
     const detail = "random.php";
@@ -29,6 +27,8 @@ function App() {
         setDrinks(result.drinks)
       },(error) => {
         setError(error);
+        setIsLoading(true);
+        setDrinks([]);
       }
     )
 
@@ -44,6 +44,7 @@ function App() {
       <h1>Random coctail</h1>
       {drink.map(drink => (
         <div key={drink.idDrink}>
+          <img src={drink.strDrinkThumb}></img>
           <h3>{drink.strDrink}</h3>
           <ul>
             <ol>{drink.strMeasure1} {drink.strIngredient1}</ol>

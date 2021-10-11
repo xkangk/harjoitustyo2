@@ -3,21 +3,27 @@
   background-color: bisque;
 }
 h1 {
+  margin: 30px;
   color: rgb(58, 40, 2);
 }
 h3 {
+  margin: 30px;
   color:rgb(96, 173, 135);
 }
 ol {
   color:rgb(33, 73, 53);
 }
 p {
+  margin: 30px;
   color:darkslategray;
 }
 
 button {
   background-color: darkseagreen;
   color: rgb(72, 107, 72);
-  margin: 10px;
   font-size: medium;
+}
+img {
+  max-width: 500px;
+  margin: 30px;
 }
