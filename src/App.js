@@ -17,7 +17,7 @@ function App() {
   useEffect(() => {
     const detail = "random.php";
     const address = URL + detail;
-    console.log(address);
+
     fetch(address)
     .then(res => res.json())
     .then(
